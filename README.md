@@ -76,3 +76,5 @@ npm run test --TAGS="@test or @add"
 Upon completion of the test run, the report will be automatically generated and accessible at /test-results/reports/index.html.
 
 ## Test result screenshot
+![Screenshot 2024-02-07 at 22 07 05](https://github.com/patelhirenh/Playwright-Cucumber-Typescript/assets/35804943/3b67bd17-40a6-4e78-b945-d177b11519d6)
+
