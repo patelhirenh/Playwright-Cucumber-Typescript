@@ -75,5 +75,4 @@ npm run test --TAGS="@test or @add"
 ## Reports
 Upon completion of the test run, the report will be automatically generated and accessible at /test-results/reports/index.html.
 
-## Sample report
-![image](https://github.com/ortoniKC/Playwright_Cucumber_TS/assets/58769833/da2d9f5a-85e7-4695-8ce2-3378b692afc4)
+## Test result screenshot
