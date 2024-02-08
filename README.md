@@ -44,8 +44,7 @@ Project Root
 3. Concurrent execution of tests.
 4. Automatically re-running failed features.
 5. Retry mechanism for failed tests in continuous integration.
-6. Integration with GitHub Actions including downloadable reports.
-7. Implementation of the Page Object Model.
+6. Implementation of the Page Object Model.
 
 ## Installation
 Clone the project:
