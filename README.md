@@ -50,7 +50,7 @@ Project Root
 ## Installation
 Clone the project:
 ```bash
-    git clone 
+    git clone https://github.com/patelhirenh/Playwright-Cucumber-Typescript.git
 ```
 
 ## Install dependencies:
@@ -61,7 +61,7 @@ Clone the project:
 ```bash
     npm run test
 ```
-## To run particular test
+## To run specific test
 ```bash
     paths: [
             "src/test/features/featurename.feature"
