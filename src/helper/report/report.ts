@@ -4,7 +4,7 @@ report.generate({
     jsonDir: "test-results",
     reportPath: "test-results/reports/",
     reportName: "Playwright Automation Report",
-    pageTitle: "BookCart App test report",
+    pageTitle: "Holiday Entitlement Calculator Test Report",
     displayDuration: false,
     metadata: {
         browser: {
