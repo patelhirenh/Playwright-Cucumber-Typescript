@@ -11,11 +11,6 @@
     "posttest": "npx ts-node src/helper/report/report.ts",
     "test:failed": "cross-env ENV=prod cucumber-js -p rerun @rerun.txt"
   },
-  "keywords": [
-    "cucumber",
-    "cucumber - TS",
-    "playwright-cucumber"
-  ],
   "devDependencies": {
     "@cucumber/cucumber": "^9.0.1",
     "@playwright/test": "1.35.0",
