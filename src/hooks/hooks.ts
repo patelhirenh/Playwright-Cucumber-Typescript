@@ -14,31 +14,10 @@ BeforeAll(async function () {
     getEnv();
     browser = await invokeBrowser();
 });
-// It will trigger for not auth scenarios
-Before({ tags: "not @auth" }, async function ({ pickle }) {
+
+Before( async function ({ pickle }) {
     const scenarioName = pickle.name + pickle.id
     context = await browser.newContext({
-        recordVideo: {
-            dir: "test-results/videos",
-        },
-    });
-    await context.tracing.start({
-        name: scenarioName,
-        title: pickle.name,
-        sources: true,
-        screenshots: true, snapshots: true
-    });
-    const page = await context.newPage();
-    fixture.page = page;
-    fixture.logger = createLogger(options(scenarioName));
-});
-
-
-// It will trigger for auth scenarios
-Before({ tags: '@auth' }, async function ({ pickle }) {
-    const scenarioName = pickle.name + pickle.id
-    context = await browser.newContext({
-        storageState: getStorageState(pickle.name),
         recordVideo: {
             dir: "test-results/videos",
         },
@@ -76,20 +55,11 @@ After(async function ({ pickle, result }) {
         );
         const traceFileLink = `<a href="https://trace.playwright.dev/">Open ${path}</a>`
         await this.attach(`Trace file: ${traceFileLink}`, 'text/html');
-
     }
-
 });
 
 AfterAll(async function () {
     await browser.close();
 })
-
-function getStorageState(user: string): string | { cookies: { name: string; value: string; domain: string; path: string; expires: number; httpOnly: boolean; secure: boolean; sameSite: "Strict" | "Lax" | "None"; }[]; origins: { origin: string; localStorage: { name: string; value: string; }[]; }[]; } {
-    if (user.endsWith("admin"))
-        return "src/helper/auth/admin.json";
-    else if (user.endsWith("lead"))
-        return "src/helper/auth/lead.json";
-}
 
 
