@@ -17,23 +17,23 @@ export default class DoYouWantToWorkOutHolidayPage {
     }
 
     async selectForAFullLeaveYearRadioButton(){
-        await this.page.getByLabel('for a full leave year').check()
-        await expect(this.page.getByLabel('for a full leave year')).toBeChecked()
+        await this.page.getByLabel(this.Elements.forAFullLeaveYearRadioButton).check()
+        await expect(this.page.getByLabel(this.Elements.forAFullLeaveYearRadioButton)).toBeChecked()
     }
 
     async selectStartingPartWayThroughRadioButton(){
-        await this.page.getByLabel('for someone starting part way through a leave year').check()
-        await expect(this.page.getByLabel('for someone starting part way through a leave year')).toBeChecked()
+        await this.page.getByLabel(this.Elements.startingPartWayThroughRadioButton).check()
+        await expect(this.page.getByLabel(this.Elements.startingPartWayThroughRadioButton)).toBeChecked()
     }
 
     async selectLeavingPartWayThroughRadioButton(){
-        await this.page.getByLabel('for someone leaving part way through a leave year').check()
-        await expect(this.page.getByLabel('for someone leaving part way through a leave year')).toBeChecked()
+        await this.page.getByLabel(this.Elements.leavingPartWayThroughRadioButton).check()
+        await expect(this.page.getByLabel(this.Elements.leavingPartWayThroughRadioButton)).toBeChecked()
     }
 
     async selectStartingAndLeavingPartWayThroughRadioButton(){
-        await this.page.getByLabel('for someone starting and leaving part way through a leave year').check()
-        await expect(this.page.getByLabel('for someone starting and leaving part way through a leave year')).toBeChecked()
+        await this.page.getByLabel(this.Elements.startingAndLeavingPartWayThroughRadioButton).check()
+        await expect(this.page.getByLabel(this.Elements.startingAndLeavingPartWayThroughRadioButton)).toBeChecked()
     }
 
     async clickContinueButton(){

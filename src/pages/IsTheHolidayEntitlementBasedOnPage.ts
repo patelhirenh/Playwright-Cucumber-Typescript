@@ -19,33 +19,33 @@ export default class IsTheHolidayEntitlementBasedOnPage {
     }
 
     async selectDaysWorkedPerWeekRadioButton(){
-        await this.page.getByLabel('days worked per week').check()
-        await expect(this.page.getByLabel('days worked per week')).toBeChecked()
+        await this.page.getByLabel(this.Elements.daysWorkedPerWeekRadioButton).check()
+        await expect(this.page.getByLabel(this.Elements.daysWorkedPerWeekRadioButton)).toBeChecked()
     }
 
     async selectHoursWorkedPerWeekRadioButton(){
-        await this.page.getByLabel('hours worked per week').check()
-        await expect(this.page.getByLabel('hours worked per week')).toBeChecked()
+        await this.page.getByLabel(this.Elements.hoursWorkedPerWeekRadioButton).check()
+        await expect(this.page.getByLabel(this.Elements.hoursWorkedPerWeekRadioButton)).toBeChecked()
     }
 
     async selectCasualOrIrregularHoursRadioButton(){
-        await this.page.getByLabel('casual or irregular hours, including zero hours contracts').check()
-        await expect(this.page.getByLabel('casual or irregular hours, including zero hours contracts')).toBeChecked()
+        await this.page.getByLabel(this.Elements.casualOrIrregularHoursRadioButton).check()
+        await expect(this.page.getByLabel(this.Elements.casualOrIrregularHoursRadioButton)).toBeChecked()
     }
 
     async selectAnnualisedHoursRadioButton(){
-        await this.page.getByLabel('annualised hours').check()
-        await expect(this.page.getByLabel('annualised hours')).toBeChecked()
+        await this.page.getByLabel(this.Elements.annualisedHoursRadioButton).check()
+        await expect(this.page.getByLabel(this.Elements.annualisedHoursRadioButton)).toBeChecked()
     }
 
     async selectCompressedHoursRadioButton(){
-        await this.page.getByLabel('compressed hours').check()
-        await expect(this.page.getByLabel('compressed hours')).toBeChecked()
+        await this.page.getByLabel(this.Elements.compressedHoursRadioButton).check()
+        await expect(this.page.getByLabel(this.Elements.compressedHoursRadioButton)).toBeChecked()
     }
 
     async selectShiftsRadioButton(){
-        await this.page.getByLabel('shifts').check()
-        await expect(this.page.getByLabel('shifts')).toBeChecked()
+        await this.page.getByLabel(this.Elements.shiftsRadioButton).check()
+        await expect(this.page.getByLabel(this.Elements.shiftsRadioButton)).toBeChecked()
     }
 
     async clickContinueButton(){

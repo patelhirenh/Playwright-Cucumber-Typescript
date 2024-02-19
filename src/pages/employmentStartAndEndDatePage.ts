@@ -20,9 +20,9 @@ export default class EmploymentStartAndEndDatePage {
     }
 
     async enterDateMonthYear(day: string, month: string, year: string) {
-        await this.page.getByLabel('Day').fill(day)
-        await this.page.getByLabel('Month').fill(month)
-        await this.page.getByLabel('Year').fill(year)
+        await this.page.getByLabel(this.Elements.dayInputField).fill(day)
+        await this.page.getByLabel(this.Elements.monthInputField).fill(month)
+        await this.page.getByLabel(this.Elements.yearInputField).fill(year)
     }
     
     async enterStartDate(date: string) {
