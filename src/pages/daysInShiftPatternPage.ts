@@ -8,9 +8,10 @@ export default class DaysInShiftPatternPage {
         this.base = new PlaywrightWrapper(page);
     }
 
-    private Elements = {
+    public Elements = {
         daysPerPattern: 'How many days in the shift',
-        continueButton: '[class$="gem-c-button--bottom-margin"]'
+        continueButton: '[class$="gem-c-button--bottom-margin"]',
+        errorMessage: '[class*="govuk-error-message"]'
     }
 
     async enterShiftsPerPattern(shifts: string) {
