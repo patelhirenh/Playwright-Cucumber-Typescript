@@ -8,9 +8,10 @@ export default class HoursInEachShiftPage {
         this.base = new PlaywrightWrapper(page);
     }
 
-    private Elements = {
+    public Elements = {
         hoursPerShift: 'How many hours in each shift?',
-        continueButton: '[class$="gem-c-button--bottom-margin"]'
+        continueButton: '[class$="gem-c-button--bottom-margin"]',
+        thereIsProblemError: '[class$="govuk-error-message"]'
     }
 
     async enterHoursPerShift(hoursPerShift: string) {

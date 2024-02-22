@@ -184,16 +184,12 @@ When('I leave hours of shift blank', async function () {
     
 });
 
-
 When('I click on continue button', async function () {
     daysInShiftPatternPage = new DaysInShiftPatternPage(fixture.page)
     await daysInShiftPatternPage.clickContinueButton()
 });
 
 Then('I should see the error {string}', async function (string) {
-    daysInShiftPatternPage = new DaysInShiftPatternPage(fixture.page)
-    const errorMessage = fixture.page.locator(daysInShiftPatternPage.Elements.errorMessage)
-    const errorMessage1: string | null = await errorMessage?.textContent();
-    await expect(errorMessage1).toContain(string)
-
+    const errorMessage = await fixture.page.locator(hoursInEachShiftPage.Elements.thereIsProblemError)
+    await expect(errorMessage).toContainText(string);
 });
