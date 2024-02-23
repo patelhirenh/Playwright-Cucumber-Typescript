@@ -1,4 +1,4 @@
-# Solirius QE UI Technical Task
+# Playwright with Typescript
 
 ## Overview of the Framework
 This framework utilizes Playwright to implement a Behavior-Driven Development (BDD) approach using TypeScript. Below is the directory structure for the framework.
